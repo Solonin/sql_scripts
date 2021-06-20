@@ -1,4 +1,4 @@
-```python
+
 SELECT
 dbo.WUHistory.ComputerName,
 COUNT(*) AS RowsCount
@@ -21,4 +21,4 @@ GROUP BY
 dbo.WUHistory.ComputerName
 ORDER BY
 ComputerName DESC
-```
+
