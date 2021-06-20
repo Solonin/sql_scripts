@@ -1,4 +1,4 @@
-```sql
+```python
 SELECT
 dbo.WUHistory.ComputerName,
 COUNT(*) AS RowsCount
