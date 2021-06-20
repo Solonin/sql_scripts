@@ -1,0 +1,22 @@
+SELECT
+dbo.WUHistory.ComputerName,
+COUNT(*) AS RowsCount
+
+
+FROM
+dbo.WUHistory
+WHERE
+ComputerName not in (SELECT
+dbo.WUHistory.ComputerName
+FROM
+dbo.WUHistory
+WHERE
+DateInstall like '%.2021%' OR DateInstall like '%.05.2021%'
+GROUP BY
+dbo.WUHistory.ComputerName)
+
+
+GROUP BY
+dbo.WUHistory.ComputerName
+ORDER BY
+ComputerName DESC
